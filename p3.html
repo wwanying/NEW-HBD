@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>點開點開</title>
+    <style>
+        body {
+            background-color: #88aed0;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+        }
+        .item {
+            background: #dcbbbb;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            cursor: pointer;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+            color:black;
+            font-size: 18px;
+            position: relative;
+        }
+        .image {
+            display: none;
+            margin-top: 10px;
+            max-width: 100%;
+            border-radius: 5px;
+        }
+        a {
+            display: block;
+            margin: 20px auto;
+            width: 150px;
+            padding: 10px;
+            background-color: #6492e1;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        a:hover {
+            background-color: #3c948b;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>請點開！！</h2>
+        <div class="item" onclick="toggleImage(1)">1
+            <img id="img1" class="image" src="pp1.JPG" alt="Error！" title="最喜歡看海惹">
+        </div>
+        <div class="item" onclick="toggleImage(2)">2
+            <img id="img2" class="image" src="pp2.JPG" alt="Error！" title="花椰菜好粗">
+        </div>
+        <div class="item" onclick="toggleImage(3)">3
+            <img id="img3" class="image" src="pp3.JPG" alt="Error！" title="阿寶打球最帥了嘻嘻">
+        </div>
+        
+    </div>
+    <a href="index.html">返回主頁</a>
+
+    <script>
+        function toggleImage(index) {
+            let img = document.getElementById('img' + index);
+            img.style.display = img.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
+</body>
+</html>

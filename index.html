@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HBD</title>
+    <style>
+        /* 基本樣式 */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #67a1a0;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        /* 頁首區域 */
+        .header {
+            background: url('indexp.JPG') no-repeat center center;
+            background-size: cover;
+            height: 400px;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            font-weight: bold;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        /* 主要內容區域 */
+        .container {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        /* 區塊樣式 */
+        .block {
+            width: 250px;
+            height: 150px;
+            margin: 10px;
+            background-color: rgb(197, 162, 162);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            font-weight: bold;
+            border-radius: 10px;
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+        /* 滑鼠懸停效果 */
+        .block:hover {
+            background-color: #3498db;
+            color: white;
+        }
+    </style>
+    <script>
+        function checkPassword(page) {
+            // 設定每個頁面的密碼
+            const passwords = {
+                "p1": "3264",
+                "p2": "940326",
+                "p3": "20y"
+            };
+
+            // 提示用戶輸入密碼
+            let input = prompt("Enter the password：");
+
+            // 驗證密碼
+            if (input === passwords[page]) {
+                window.location.href = page + ".html";  // 跳轉到對應頁面
+            } else if (input !== null) {
+                alert("Error！");
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <!-- 頁首 -->
+    <div class="header">
+
+    </div>
+
+    <!-- 內容區塊 -->
+    <div class="container">
+        <div class="block" onclick="checkPassword('p1')">禮物說明</div>
+        <div class="block" onclick="checkPassword('p2')">想對尼說的話</div>
+        <div class="block" onclick="checkPassword('p3')">秘密</div>
+    </div>
+
+</body>
+</html>
